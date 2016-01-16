@@ -1,0 +1,21 @@
+<template name="header">
+	<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid" id="">
+		  <div class="navbar-header">
+				<a class="navbar-brand bigger" href="/admin">Quiet Earth</a>			  	   
+		  </div><!--end  class=navbar-header -->				
+  		<div class="collapse navbar-collapse" id="main-nav">
+  				{{#if currentUser}}
+  					  <div class="navbar-right plain">
+  					 		<a class="btn btn-danger navbar-btn" href="/signout"><i class="fa fa-lock"></i>Sign Out</a>
+  					  </div><!--end  class=navbar-right plain -->
+  				{{else}}
+					  <div class="navbar-right plain">
+					  	<a href="/signin" class="btn btn-primary navbar-btn">Sign In</a>
+					  	<a href="/register" class="btn btn-default navbar-btn">Register</a>
+					  </div><!--end  class=navbar-right plain -->
+					{{/if}}
+  		</div>
+		</div>				
+	</nav>
+</template>
